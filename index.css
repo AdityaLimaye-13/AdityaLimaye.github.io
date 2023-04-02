@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  transition: transform 1s ease-out;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: silver;
+  flex-direction: column;
+  font-size: 50px;
+}
+
+.highlight {
+  font-weight: bolder;
+  color: firebrick;
+}
+
+.btn-outline-dark {
+  transition: 0.4s;
+  font-size: 1.1rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: auto;
+  z-index: 1;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  background-color: slategray;
+  padding-left: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  gap: 30px;
+}
+
+nav ul li {
+  list-style-type: none;
+  font-size: 1.7rem;
+}
+
+nav ul li span {
+  padding-top: 2px;
+  font-weight: bolder;
+}
+
+nav ul li span:hover {
+  transition: 0.2s;
+  color: firebrick;
+  cursor: pointer;
+}
+
+/* Navbar ends here */
+
+#services {
+  background-color: #303030;
+  color: aliceblue;
+  background-image: url(./img/services-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-position-y: 25%;
+  text-align: center;
+  height: 100vh;
+}
+
+.section-title-services {
+  position: relative;
+  color: firebrick;
+}
+
+.section-title-services::after {
+  content: "";
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: 0.25em auto 1em;
+  background-color: #fff;
+}
+
+.services {
+  display: flex;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service {
+  margin: 10px;
+}
+
+.aboutMe-btn {
+  display: inline-block;
+  background-color: firebrick;
+  text-decoration: none;
+  color: aliceblue;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+
+.aboutMe-btn:hover {
+  text-decoration: none;
+  color: aliceblue;
+  background-color: firebrick;
+  transform: scale(1.1);
+}
+
+/* Service section ends here  */
+
+#aboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutMe-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-about {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  position: relative;
+  color: #303030;
+}
+
+.title-about::after {
+  content: "";
+  display: block;
+  width: 3em;
+  height: 3px;
+  margin: 0.25em auto 1em;
+  background-color: firebrick;
+}
+
+.aboutMe-subtitle {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.aboutMe-body {
+  width: 80%;
+}
+
+.skills-title {
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  position: relative;
+  color: #303030;
+}
+
+.skills-title::after {
+  content: "";
+  display: block;
+  width: 3em;
+  height: 3px;
+  margin: 0.25em auto 1em;
+  background-color: firebrick;
+}
+
+.skills {
+  width: 100%;
+  max-width: 80%;
+  padding: 10px 10px;
+}
+
+.skill-name {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin: 20px 0;
+}
+
+.skill-bar {
+  height: 15px;
+  background-color: silver;
+  border-radius: 5px;
+}
+
+.skill-per {
+  height: 15px;
+  background-color: firebrick;
+  border-radius: 5px;
+  position: relative;
+}
+
+.animation {
+  animation: fillbars 5s 1;
+  animation-timing-function: ease-in-out;
+}
+
+.animationRemove {
+  animation: emptybars 5s 1;
+  animation-timing-function: ease-in-out;
+}
+
+.skill-per::before {
+  content: attr(per);
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  border-radius: 4px;
+  padding: 6px;
+  right: 0;
+  top: -46px;
+  transform: translateX(50%);
+}
+
+.skill-per::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  top: -20px;
+  right: 0;
+  border-radius: 2px;
+  transform: translateX(50%) rotate(45deg);
+}
+
+@keyframes fillbars {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes emptybars {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+.my-work {
+  height: 100vh;
+  text-align: center;
+}
+
+.footer {
+  background: #111;
+  color: aliceblue;
+  text-align: center;
+  padding: 2.5em 0;
+  font-size: 1.5rem;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__link {
+  font-weight: bold;
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+  opacity: 0.7;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0 0.5em;
+}
+
+.social-list__link {
+  padding: 0.5em;
+}
+
+@media (max-width: 768px) {
+  #home {
+    font-size: 30px;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  nav ul li {
+    font-size: 1.2rem;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    text-align: justify;
+  }
+
+  #aboutMe {
+    text-align: center;
+  }
+
+  .skills {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  #home {
+    padding: 10px;
+    font-size: 22px;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul li {
+    font-size: 1rem;
+  }
+
+  #services {
+    background-size: cover;
+    text-align: center;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    text-align: justify;
+  }
+
+  .service {
+    margin: 10px;
+  }
+}
